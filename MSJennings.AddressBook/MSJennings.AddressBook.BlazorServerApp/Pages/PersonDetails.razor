@@ -1,0 +1,19 @@
+﻿@page "/PersonDetails/{Id}"
+@inherits PersonDetailsBase
+
+<h1 class="page-title">Person Details</h1>
+
+<div class="form-group row">
+    <label for="PersonId" class="col-2">ID</label>
+    <label id="PersonId" class="col-10 form-control-plaintext">@Person.Id</label>
+</div>
+
+<div class="form-group row">
+    <label for="PersonFirstName" class="col-2">First Name</label>
+    <label id="PersonFirstName" class="col-10 form-control-plaintext">@Person.FirstName</label>
+</div>
+
+<div class="form-group row">
+    <label for="PersonLastName" class="col-2">Last Name</label>
+    <label id="PersonLastName" class="col-10 form-control-plaintext">@Person.LastName</label>
+</div>

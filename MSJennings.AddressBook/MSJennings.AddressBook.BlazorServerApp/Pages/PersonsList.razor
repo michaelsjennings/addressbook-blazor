@@ -1,0 +1,35 @@
+﻿@page "/PersonsList"
+@inherits PersonsListBase
+
+<h1 class="page-title">All Persons</h1>
+
+@if (Persons == null)
+{
+    <p>Loading . . .</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in Persons)
+            {
+                <tr>
+                    <td>@person.Id</td>
+                    <td>@person.FirstName</td>
+                    <td>@person.LastName</td>
+                    <td>
+                        <a href="@($"PersonDetails/{person.Id}")" class="btn btn-primary table-btn">Details</a>
+                        <a href="@($"PersonEdit/{person.Id}")" class="btn btn-primary table-btn">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
